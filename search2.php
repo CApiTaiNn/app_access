@@ -9,7 +9,9 @@ function readCSV($filename) {
     if (($handle = fopen($filename, 'r')) !== FALSE) {
         while (($row = fgetcsv($handle, 1000, ';')) !== FALSE) {
             // Convertir chaque cellule en UTF-8
-            $row = array_map('utf8_encode', $row);
+            $row = array_map(function($cell) {
+                return iconv('ISO-8859-1', 'UTF-8', $cell);
+            }, $row);
             $data[] = $row;
         }
         fclose($handle);
@@ -30,13 +32,15 @@ if (isset($_GET['query'])) {
             $results[] = [
                 'alphaName' => $row[0],
                 'codeACF' => $row[1],
-                'region' => $row[9],
-                'description' => $row[10],
-                'anc' => $row[4],
+                'nomVente' => $row[2],
                 'base' => $row[3],
-                'fiefAlpha' => $row[2],
-                'source' => $row[5],
-                'image' => 'path_to_image' // Assuming you have a path to the image
+                'anc' => $row[4],
+                'fiefAlpha' => $row[5],
+                'fiefTL' => $row[6],
+                'histo' => $row[7],
+                'source' => $row[8],
+                'region' => $row[9],
+                'description' => $row[10],   
             ];
         }
     }

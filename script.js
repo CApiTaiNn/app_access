@@ -35,9 +35,9 @@ function searchNames() {
                          histoElement.textContent = result.histo;
 
                         // Ajoute l'ancien nom ou le fief selon la base
-                        if (result.base == "B") {
+                        if (result.base[0] == "B") {
                             histoElement.textContent += `Ce nom est une probable dérivation de ${result.anc}.`; // concatène l'ancien nom
-                        } else if (result.base == "C") {
+                        } else if (result.base[0] == "C") {
                             histoElement.textContent += `Ce nom est une probable dérivation de ${result.anc}.` + result.fiefAlpha; // concatène l'ancien nom et le fief
                         }
                         document.getElementById('source-output').textContent = "Source bibliographique: " + result.source; // Afficher la région

@@ -41,7 +41,7 @@ function searchNames() {
                             histoElement.textContent += `Ce nom est une probable dérivation de ${result.anc}.` + result.fiefAlpha; // concatène l'ancien nom et le fief
                         }
                         document.getElementById('source-output').textContent = "Source bibliographique: " + result.source; // Afficher la région
-                        document.querySelector('.blason-image').src = result.image; // Mettre à jour l'image du blason
+                        document.querySelector('.blason-image').src = result.blason; // Mettre à jour l'image du blason
                         resultsDiv.innerHTML = ''; // Vider les résultats après sélection
                         resultsDiv.style.display = 'none'; // Cacher les résultats après sélection
                     };

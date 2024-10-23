@@ -29,6 +29,13 @@ if (isset($_GET['query'])) {
     foreach ($data as $row) {
         $alphaName = strtolower(trim($row[0])); // Assure-toi de vérifier la casse et d'enlever les espaces
         if (strpos($alphaName, $query) !== FALSE) {
+            $imagePath = './images/' . $row[1] . '.jpg'; // Assurez-vous que l'extension correspond à vos fichiers d'image
+
+            // Vérifier si le fichier d'image existe
+            if (!file_exists($imagePath)) {
+                $imagePath = './images/blason2.jpg'; // Chemin vers une image par défaut si le fichier n'existe pas
+            }
+
             $results[] = [
                 'alphaName' => $row[0],
                 'codeACF' => $row[1],
@@ -40,7 +47,8 @@ if (isset($_GET['query'])) {
                 'histo' => $row[7],
                 'source' => $row[8],
                 'region' => $row[9],
-                'description' => $row[10],   
+                'description' => $row[10],
+                'blason' => $imagePath
             ];
         }
     }

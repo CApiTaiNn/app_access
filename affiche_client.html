@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage client</title>
+    <link rel="stylesheet" href="./style/affichage_client.css">
+</head>
+<body>
+    <main>
+        <div class="a4-landscape">
+            <div class="content">
+                <div class="info">
+                    <p id="name-output">NOM</p>
+                    <img src="path_to_image" alt="Blason" class="blason-image" id="blason-output">
+                    <p id="description-output">Description</p>
+                    <p>Archives Chantiaux Frères</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Fonction pour remplir les informations depuis l'URL ou le stockage local
+        function loadContent() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('name-output').textContent = urlParams.get('name') || 'NOM';
+            document.getElementById('description-output').textContent = urlParams.get('description') || 'Description';
+            document.getElementById('blason-output').src = urlParams.get('image') || 'path_to_image';
+        }
+
+        window.onload = loadContent;
+    </script>
+</body>
+</html>
+
+
+

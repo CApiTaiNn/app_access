@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: azure;
+}
+
+.a4-landscape {
+    width: 29.7cm;
+    height: 21cm;
+    margin: 1cm auto;
+    border: 1px solid black;
+    background-color: white;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../images/fond.png'); /* Image de fond décorative */
+    background-size: cover; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: center; /* Centrer l'image */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+
+.info {
+    font-size: 18px;
+}
+
+#name-output{
+    font-size: 50px;
+}
+
+img.blason-image {
+    width: 200px;
+    height: auto;
+}
+
+#results {
+    display: none;
+    max-height: 150px;
+    margin: 10px auto 0; 
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f9f9f9;
+    width: calc(80% - 20px); 
+    box-sizing: border-box; 
+}
+
+#description-output{
+    width: 30em;
+}

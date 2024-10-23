@@ -1,0 +1,22 @@
+#imprimer{
+    display: none;
+}
+
+#recherche{
+    display: none;
+}
+
+.a4-landscape{
+    margin: 0;
+    border: 0;
+}
+
+
+body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact; /* Cela garantit que les couleurs de fond et les images sont imprimées */
+}
+
+#visu_client{
+    display: none;
+}

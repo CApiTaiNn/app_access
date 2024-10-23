@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page A4 en Paysage</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/print.css" type="text/css" media="print" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <article id="recherche">
+            <form>
+                <label for="nameInput">Entrez un nom :</label>
+                <input type="text" id="nameInput" onkeyup="searchNames()" autocomplete="off">
+                <div id="results"></div>
+            </form>
+        </article>
+        <article id="affiche_bouton">
+            <div class="a4-landscape">
+                <div class="content">
+                    <div class="info">
+                        <p id="name-output">NOM</p>
+                        <img src="path_to_image" alt="Blason" class="blason-image" id="blason-output">
+                        <p id="description-output">Description du blason</p>
+                        <p id="descriptionFamille-output">Si necessaire en fonction du code BASE on rajoute ANC .. et/ou info du fiefs donc seigneur de ...</p>
+                        <p id="source-output">Source</p>
+                        <p id="ACF">Archives Chantiaux Frères</p>
+                    </div>
+                </div>
+            </div>
+            <div id="button">
+                <button onclick="imprimer()" id="imprimer">imprimer</button>
+                <button onclick="affichage_client()" id="visu_client">affichage client</button>
+                <select name="police" id="police" onchange="choix_police()">
+                    <option value="default">...</option>
+                    <option value="anglaise">Anglaise</option>
+                    <option value="PSMJ">PSMJ</option>
+                </select>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

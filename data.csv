@@ -1,0 +1,13 @@
+1;DUPONT;ACF-2;Dupont de Normandie;B;Anc.Dupont;;FIEFND;histoire;source;Normandie
+2;LEROY;ACF-3;Leroy de Provence;C;Anc.Leroy;Seigneur de Provence;FIEFPR;histoire;source;Provence
+3;LAMBERT;ACF-4;Lambert d'Alsace;B;Anc.Lambert;;FIEFAL;histoire;source;Alsace
+4;DUBOIS;ACF-5;Dubois de Savoie;C;Anc.Dubois;Seigneur de Savoie;FIEFSV;histoire;source;Savoie
+5;BERTRAND;ACF-6;Bertrand de Lorraine;B;Anc.Bertrand;;FIEFLR;histoire;source;Lorraine
+6;ROUSSEAU;ACF-7;Rousseau du Berry;C;Anc.Rousseau;Seigneur du Berry;FIEFBR;histoire;source;Berry
+7;MARTIN;ACF-8;Martin de Picardie;B;Anc.Martin;;FIEFPC;histoire;source;Picardie
+8;BAUDRY;ACF-9;Baudry de Bourgogne;C;Anc.Baudry;Seigneur de Bourgogne;FIEFBO;histoire;source;Bourgogne
+9;PERRIN;ACF-10;Perrin de Champagne;B;Anc.Perrin;;FIEFCH;histoire;source;Champagne
+10;GIRARD;ACF-11;Girard d'Auvergne;C;Anc.Girard;Seigneur d'Auvergne;FIEFAV;histoire;source;Auvergne
+
+la définition sera a la fin de ce fichier : exemple
+GIRARD;ACF-11;Girard d'Auvergne;C;Anc.Girard;Seigneur d'Auvergne;FIEFAV;histoire;source;Auvergne;Definition du blazon
